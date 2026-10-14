@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    color: #171323;
+    background: linear-gradient(135deg, #bba2f5, #8ed5f5, #d4c4ff);
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px;
+    background: linear-gradient(145deg, #e4d8ff, #c7eaff);
+    border: 2px solid #a18add;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px #55408040;
+}
+
+.title {
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+    color: #35204f;
+    text-shadow: 2px 2px 0 #a8dcff;
+}
+
+h2 {
+    margin-top: 35px;
+    padding-bottom: 12px;
+    color: #402b67;
+    border-bottom: 3px solid #8d75d5;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #272139;
+}
+
+#wonder-content {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #d4c2ff, #a9ddf8);
+    border: 2px solid #9a82df;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px #59418b25;
+}
+
+#wonder-content h2 {
+    margin-top: 0;
+    color: #33204f;
+    border-bottom-color: #6e9edb;
+}
+
+#wonder-content p {
+    color: #211b30;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 25px auto;
+    border: 3px solid #a18add;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px #35204f30;
+}
+
+#wonders-list {
+    padding-left: 30px;
+}
+
+#wonders-list li {
+    margin: 12px 0;
+    padding: 15px;
+    background: linear-gradient(100deg, #cbb8ff, #b2e5ff);
+    border-left: 5px solid #7252b5;
+    border-radius: 9px;
+    transition: 0.2s;
+}
+
+#wonders-list li:hover {
+    background: linear-gradient(100deg, #b5a0f0, #8bd2f4);
+    transform: translateX(5px);
+}
+
+a {
+    color: #24183d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4931a0;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    #wrapper {
+        padding: 20px 15px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    #wonder-content {
+        padding: 15px;
+    }
+}

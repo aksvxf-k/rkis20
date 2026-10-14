@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семь чудес света</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 class="title">Семь чудес света</h1>
+
+        <p>
+            Во все века люди гордились и бережно охраняли достижения
+            своих цивилизаций. Память об этих достижениях дошла и до
+            наших дней, став достоянием всемирной истории.
+            Семь чудес света — это классический список выдающихся
+            творений рук человеческих.
+        </p>
+
+        <p>
+            Интересен факт, что он был хорошо известен еще до нашей эры.
+            В древних школах детей обучали разным наукам, и знание
+            семи чудес света было обязательным.
+        </p>
+
+        <p>
+            В данной статье мы предоставим вам список семи чудес света
+            и краткое описание каждого из них.
+        </p>
+
+        <div id="wonder-content"></div>
+
+        <h2>Список 7 чудес света</h2>
+
+        <ol id="wonders-list"></ol>
+
+    </div>
+
+    <script src="seven-wonders.js"></script>
+
+    <script>
+        // Случайно выбираем одно чудо света
+        const randomIndex = Math.floor(Math.random() * sevenWonders.length);
+        const wonder = sevenWonders[randomIndex];
+
+        // Находим блок для основного контента
+        const content = document.getElementById('wonder-content');
+
+        // Создаем HTML основного контента
+        let contentHTML = `
+            <h2>${wonder.name}</h2>
+            ${wonder.description}
+        `;
+
+        // Добавляем фотографии
+        for (let i = 0; i < wonder.images.length; i++) {
+            contentHTML += `
+                <img src="${wonder.images[i].src}"
+                     alt="${wonder.images[i].title}">
+            `;
+        }
+
+        // Вставляем основной контент в документ
+        content.innerHTML = contentHTML;
+
+        // Находим блок для списка ссылок
+        const list = document.getElementById('wonders-list');
+
+        // Создаем список ссылок на все семь чудес света
+        let listHTML = '';
+
+        for (let i = 0; i < sevenWonders.length; i++) {
+            listHTML += `
+                <li>
+                    <a href="${sevenWonders[i].href}" target="_blank">
+                        ${sevenWonders[i].title}
+                    </a>
+                </li>
+            `;
+        }
+
+        // Вставляем список в документ
+        list.innerHTML = listHTML;
+    </script>
+
+</body>
+</html>
